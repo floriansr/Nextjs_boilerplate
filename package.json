@@ -1,0 +1,17 @@
+{
+  "name": "boilerplate_nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "author": "Florian Sueur <sueurfloriansf@gmail.com> (https://github.com/floriansr)",
+  "license": "MIT"
+}
