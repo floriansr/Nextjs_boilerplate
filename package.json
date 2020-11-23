@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,json,babelrc}' --config ./.prettierrc"
   },
   "dependencies": {
     "next": "latest",
@@ -19,11 +19,13 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.9",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
     "babel-plugin-styled-components": "latest",
+    "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
@@ -32,6 +34,10 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^6.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "next-fonts": "^1.5.1",
+    "next-images": "^1.6.2",
+    "nprogress": "^0.2.0",
     "prettier": "^2.2.0"
   },
   "author": "Florian Sueur",
