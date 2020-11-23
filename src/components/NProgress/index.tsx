@@ -1,8 +1,8 @@
-import Router from 'next/router';
-import NProgress, { NProgressOptions } from 'nprogress';
-
 import * as React from 'react';
 import { useCallback, useEffect } from 'react';
+
+import Router from 'next/router';
+import NProgress, { NProgressOptions } from 'nprogress';
 
 interface NextNProgressPropsTypes {
   color: string;
