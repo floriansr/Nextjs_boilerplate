@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Layout, siteTitle } from 'components/manager';
@@ -19,6 +20,9 @@ const Home = () => {
         </Head>
         <Container>
           <h1>Hello, world!</h1>
+          <Link href="/second-page">
+            <a>second page</a>
+          </Link>
         </Container>
       </Layout>
       ;
