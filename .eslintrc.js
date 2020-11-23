@@ -75,10 +75,10 @@ module.exports = {
       'error',
       {
         groups: [
+          ['^react'],
           ['^@?\\w'],
           ['^\\u0000'],
           ['^assets(/.*|$)'],
-          ['^react'],
           ['^redux(/.*|$)'],
           ['^constants(/.*|$)'],
           ['^services(/.*|$)'],
