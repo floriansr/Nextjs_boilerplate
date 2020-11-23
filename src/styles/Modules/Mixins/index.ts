@@ -1,9 +1,9 @@
-import { css, CSSObject, FlattenSimpleInterpolation } from 'styled-components';
+import { css } from 'styled-components';
 import colors from 'styles/Modules/Colors';
 
 export const breakpoint = (
   size: 'mobile' | 'tablet' | 'desktop',
-  innerCss: FlattenSimpleInterpolation | TemplateStringsArray | CSSObject
+  innerCss: TemplateStringsArray
 ) => {
   let px;
   switch (size) {
