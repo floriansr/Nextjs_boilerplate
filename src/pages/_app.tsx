@@ -1,6 +1,9 @@
 import { AppProps } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
+import * as React from 'react';
+
+import NpTopProgressBar from 'components/NProgress/config';
 const GlobalStyle = createGlobalStyle`
   * {
   box-sizing: border-box;
@@ -36,12 +39,13 @@ const theme = {
   }
 };
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <>
       <GlobalStyle />
+      <NpTopProgressBar />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component {...pageProps} key={router.route} />
       </ThemeProvider>
     </>
   );
