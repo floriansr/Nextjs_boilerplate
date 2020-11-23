@@ -74,12 +74,12 @@ module.exports = {
         default: 'array-simple'
       }
     ],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
-    'import/no-unresolved': 'warn',
+    '@typescript-eslint/explicit-function-return-type': ['off'],
+    '@typescript-eslint/explicit-member-accessibility': ['off'],
+    '@typescript-eslint/no-explicit-any': ['off'],
+    '@typescript-eslint/explicit-module-boundary-types': ['off'],
+    '@typescript-eslint/ban-ts-comment': ['off'],
+    'import/no-unresolved': ['warn'],
     quotes: [2, 'single', { avoidEscape: true }],
     'jsx-a11y/media-has-caption': ['off'],
     'jsx-a11y/label-has-associated-control': [
