@@ -1,4 +1,4 @@
-import type { Breakpoints } from '@types/styled-components/theme';
+import type { Breakpoints } from 'types/styled-components/theme';
 import type { DefaultTheme } from 'styled-components';
 import colors from 'styles/Modules/Colors';
 import { pxToRem } from 'styles/Modules/Mixins';
