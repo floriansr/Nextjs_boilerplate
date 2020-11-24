@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import colors from 'styles/Modules/Colors';
+import { colors } from 'styles/Modules';
 
 export const breakpoint = (
   size: 'mobile' | 'tablet' | 'desktop',
