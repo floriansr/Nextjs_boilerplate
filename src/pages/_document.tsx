@@ -1,15 +1,12 @@
-import Document, {
-  DocumentContext,
-  DocumentInitialProps,
-  Head,
-  Html,
-  Main,
-  NextScript
-} from 'next/document';
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-class MyDocument extends Document<any> {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+interface Props {
+  styleTags: Array<React.ReactElement<unknown>>;
+}
+
+class MyDocument extends Document<Props> {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -36,11 +33,11 @@ class MyDocument extends Document<any> {
     }
   }
 
-  render(): JSX.Element {
+  render() {
     return (
       // useful for custom metadata
       <Html lang="en">
-        <Head />
+        <Head>{this.props.styleTags}</Head>
         <body>
           <Main />
           <NextScript />
