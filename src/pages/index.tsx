@@ -1,31 +1,20 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import styled from 'styled-components';
+import AppBox from 'ui/AppBox';
+import { Heading, Text } from 'ui/Typography';
 
-import { Layout, siteTitle } from 'components/manager';
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-`;
+import { AppHead, Page } from 'components';
 
 const Home = () => {
   return (
     <>
-      <Layout home>
-        <Head>
-          <title>{siteTitle}</title>
-        </Head>
-        <Container>
-          <h1>Hello, world!</h1>
-          <Link href="/second-page">
-            <a>second page</a>
-          </Link>
-        </Container>
-      </Layout>
-      ;
+      <Page>
+        <AppHead title="Homepage" />
+        <Heading as="h1">Index Page</Heading>
+        <AppBox mt={2} width={1 / 2}>
+          <Text bg="gray.200" color="red.400">
+            Hello from index page
+          </Text>
+        </AppBox>
+      </Page>
     </>
   );
 };

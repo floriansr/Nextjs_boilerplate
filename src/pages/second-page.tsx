@@ -1,31 +1,20 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import styled from 'styled-components';
+import AppBox from 'ui/AppBox';
+import { Heading, HeadingSize, Text } from 'ui/Typography';
 
-import { Layout } from 'components/manager';
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-`;
+import { AppHead, Page } from 'components';
 
 const Second_page = () => {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Second_page</title>
-        </Head>
-        <Container>
-          <h1>Hello, user!</h1>
-          <Link href="/">
-            <a>First page</a>
-          </Link>
-        </Container>
-      </Layout>
-      ;
+      <Page>
+        <AppHead title="About" />
+        <Heading as="h1" size={HeadingSize.Xl}>
+          About Page
+        </Heading>
+        <AppBox mt={2}>
+          <Text>Hello from about page</Text>
+        </AppBox>
+      </Page>
     </>
   );
 };
