@@ -1,8 +1,8 @@
-import type { Breakpoints } from 'types/styled-components/theme';
 import type { DefaultTheme } from 'styled-components';
-import colors from 'styles/Modules/Colors';
+import { colors } from 'styles/Modules';
 import { pxToRem } from 'styles/Modules/Mixins';
 import typography from 'styles/Themes/Typography';
+import type { Breakpoints } from 'types/styled-components/theme';
 
 export const BR_TABLET = 720;
 export const BR_DESKTOP = 1024;
