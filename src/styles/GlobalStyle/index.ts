@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import reset from 'styles/Modules/Reset';
+import { MAIN_BACKGROUND, reset } from 'styles/Modules';
+import { theme } from 'styles/Themes';
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
@@ -14,9 +15,8 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     letter-spacing: .03rem;
     margin: 0 auto;
-  }
-  h1 {
-    font-size: 4rem;
+    ${MAIN_BACKGROUND};
+    color: ${(props) => theme(props).colors.text};
   }
   a {
     color: #bf9e5f;
