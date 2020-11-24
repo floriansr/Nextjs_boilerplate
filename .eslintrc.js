@@ -104,15 +104,14 @@ module.exports = {
       {
         groups: [
           ['^react'],
+          ['^next'],
           ['^@?\\w'],
           ['^\\u0000'],
-          ['^assets(/.*|$)'],
-          ['^redux(/.*|$)'],
-          ['^constants(/.*|$)'],
+          ['^styles(/.*|$)'],
+          ['^ui(/.*|$)'],
           ['^services(/.*|$)'],
           ['^tools(/.*|$)'],
           ['^components(/.*|$)'],
-          ['^pages(/.*|$)'],
           ['^\\.']
         ]
       }
