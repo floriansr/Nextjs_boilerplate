@@ -1,11 +1,12 @@
 import * as React from 'react';
 
+import { AnimatePresence } from 'framer-motion';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/GlobalStyle';
-import light from 'styles/Themes/light';
-import AppNav from 'components/AppNav';
+import light from 'styles/Themes/Light';
 
+import AppNav from 'components/AppNav';
 import NpTopProgressBar from 'components/NProgress/config';
 
 const App = ({ Component, pageProps, router }: AppProps) => {
@@ -15,7 +16,9 @@ const App = ({ Component, pageProps, router }: AppProps) => {
         <GlobalStyle />
         <NpTopProgressBar />
         <AppNav />
-        <Component {...pageProps} key={router.route} />
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </ThemeProvider>
     </>
   );
