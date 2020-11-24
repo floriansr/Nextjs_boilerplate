@@ -1,5 +1,9 @@
+import type { HTMLAttributes, RefAttributes } from 'react';
 import * as React from 'react';
-import styled, { css, DefaultTheme } from 'styled-components';
+
+import shouldForwardProp from '@styled-system/should-forward-prop';
+import type { DefaultTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   border,
   BorderProps,
@@ -25,8 +29,6 @@ import {
   typography,
   TypographyProps
 } from 'styled-system';
-import shouldForwardProp from '@styled-system/should-forward-prop';
-import type { HTMLAttributes, RefAttributes } from 'react';
 import { SPACES_SCALES } from 'styles/Themes/Base';
 
 type AppBoxHTMLProps = RefAttributes<any> & HTMLAttributes<any>;
