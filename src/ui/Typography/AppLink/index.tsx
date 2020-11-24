@@ -1,8 +1,10 @@
 import * as React from 'react';
 
 import Link, { LinkProps } from 'next/link';
+
 import type { CSSObject } from 'styled-components';
 import styled, { css } from 'styled-components';
+
 import AppBox, { AppBoxProps, FontWeight, LineHeight } from 'ui/AppBox';
 
 interface OwnProps {

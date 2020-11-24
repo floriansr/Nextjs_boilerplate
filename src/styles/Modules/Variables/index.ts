@@ -1,7 +1,8 @@
 import { css } from 'styled-components';
+import { Breakpoints } from 'types/styled-components/theme';
+
 import { theme } from 'styles/Themes';
 import { breakpoints } from 'styles/Themes/Base';
-import { Breakpoints } from 'types/styled-components/theme';
 
 export const BREAKPOINTS: Breakpoints = breakpoints;
 

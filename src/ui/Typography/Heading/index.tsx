@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { ResponsiveValue } from 'styled-system';
+
 import AppBox, { AppBoxOwnProps, FontSize, PolymorphicComponent } from 'ui/AppBox';
 
 export enum HeadingSize {

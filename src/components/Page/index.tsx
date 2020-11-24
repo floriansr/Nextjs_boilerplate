@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import { motion } from 'framer-motion';
 import { NextPage } from 'next';
+
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
+
 import { BREAKPOINTS } from 'styles/Modules/Variables';
 
 import { DefaultRouterPageVariants } from 'tools/Framer-Motion';

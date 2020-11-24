@@ -29,6 +29,7 @@ import {
   typography,
   TypographyProps
 } from 'styled-system';
+
 import { SPACES_SCALES } from 'styles/Themes/Base';
 
 type AppBoxHTMLProps = RefAttributes<any> & HTMLAttributes<any>;

@@ -1,6 +1,6 @@
-import colors from 'styles/Modules/Colors';
-
 import 'styled-components';
+
+import colors from 'styles/Modules/Colors';
 
 export interface Breakpoints {
   tablet: string;

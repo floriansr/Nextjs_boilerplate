@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import { AnimatePresence } from 'framer-motion';
 import { AppProps } from 'next/app';
+
+import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from 'styled-components';
+
 import GlobalStyle from 'styles/GlobalStyle';
 import light from 'styles/Themes/Light';
 
