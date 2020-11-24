@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import reset from 'styles/Modules/Reset';
 
 const GlobalStyle = createGlobalStyle`
+  ${reset};
+  
   * {
   box-sizing: border-box;
   word-wrap: break-word;
@@ -21,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   img {
     border: 0px;
