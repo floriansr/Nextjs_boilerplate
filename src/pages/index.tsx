@@ -1,9 +1,11 @@
+import * as React from 'react';
+
 import AppBox from 'ui/AppBox';
 import { Heading, Text } from 'ui/Typography';
 
 import { AppHead, Page } from 'components';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <Page>

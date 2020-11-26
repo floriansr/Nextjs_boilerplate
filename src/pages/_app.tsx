@@ -11,7 +11,7 @@ import light from 'styles/Themes/Light';
 import AppNav from 'components/AppNav';
 import NpTopProgressBar from 'components/NProgress/config';
 
-const App = ({ Component, pageProps, router }: AppProps) => {
+const App: React.FC<AppProps> = ({ Component, pageProps, router }: AppProps) => {
   return (
     <>
       <ThemeProvider theme={light}>

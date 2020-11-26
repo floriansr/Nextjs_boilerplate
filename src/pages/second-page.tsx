@@ -1,9 +1,11 @@
+import * as React from 'react';
+
 import AppBox from 'ui/AppBox';
 import { Heading, HeadingSize, Text } from 'ui/Typography';
 
 import { AppHead, Page } from 'components';
 
-const Second_page = () => {
+const Second_page: React.FC = () => {
   return (
     <>
       <Page>
