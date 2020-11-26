@@ -10,6 +10,7 @@ import { BREAKPOINTS } from 'styles/Modules/Variables';
 import { DefaultRouterPageVariants } from 'tools/Framer-Motion';
 
 interface Props {
+  children: React.ReactNode;
   readonly as?: string;
   readonly noDefaultTransition?: boolean;
 }
@@ -28,9 +29,13 @@ const PageInner = styled(motion.div)`
   }
 `;
 
-const Page: NextPage<Props> = ({ children, as = 'div', noDefaultTransition = false, ...rest }) =>
+const Page: NextPage<Props> = ({
+  children,
+  as = 'div',
+  noDefaultTransition = false,
+  ...rest
+}: Props) =>
   React.createElement(
-    // @ts-ignore
     motion[as],
     {
       exit: 'exit',
