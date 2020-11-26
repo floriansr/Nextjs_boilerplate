@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import { MAIN_BACKGROUND, reset } from 'styles/Modules';
 import { theme } from 'styles/Themes';
 
-const GlobalStyle = createGlobalStyle`
+export default createGlobalStyle`
   ${reset};
   
   * {
@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: .03rem;
     margin: 0 auto;
     ${MAIN_BACKGROUND};
-    color: ${(props) => theme(props).colors.text};
+    color: ${(props): string => theme(props).colors.text};
   }
   a {
     color: #bf9e5f;
@@ -32,5 +32,3 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 `;
-
-export default GlobalStyle;
