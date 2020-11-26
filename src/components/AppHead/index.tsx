@@ -13,7 +13,7 @@ interface Props {
   socialImage?: string;
 }
 
-const AppHead: React.FC<Props> = ({ title, description, url, socialImage }) => (
+const AppHead: React.FC<Props> = ({ title, description, url, socialImage }: Props) => (
   <NextHead>
     <meta key="charset" charSet="UTF-8" />
     <title>{title}</title>
