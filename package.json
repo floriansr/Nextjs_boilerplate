@@ -7,19 +7,30 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,json,babelrc}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,json,babelrc}' --config ./.prettierrc",
+    "ts:check": "tsc --noEmit",
+    "test": "jest --runInBand --coverage=false",
+    "test:ci": "yarn test --ci",
+    "test:watch": "yarn test --watch"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "babel-jest": "^26.6.3",
     "framer-motion": "^2.9.4",
+    "jest": "^26.6.3",
+    "jest-styled-components": "^7.0.3",
     "next": "latest",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "latest",
     "styled-system": "^5.1.5",
+    "ts-jest": "^26.4.4",
     "typescript": "^4.1.2"
   },
   "devDependencies": {
     "@styled-system/should-forward-prop": "^5.1.5",
+    "@types/jest": "^26.0.15",
     "@types/node": "^14.14.9",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.0",
