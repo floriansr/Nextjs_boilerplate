@@ -43,19 +43,18 @@ module.exports = {
     'plugin:prettier/recommended' // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
-    'react/display-name': ['off'],
-    'react/no-unescaped-entities': ['off'],
-    'react/prop-types': ['off'],
-    'react/react-in-jsx-scope': ['off'],
-    'react-hooks/rules-of-hooks': ['off'], // Vérifie les règles des Hooks
-    'react-hooks/exhaustive-deps': ['off'], // Vérifie les tableaux de dépendances
-    '@typescript-eslint/no-unused-vars': ['off'],
-    'no-unused-vars': ['off'],
-    'no-underscore-dangle': ['off'],
-    'no-console': ['off'],
-    '@typescript-eslint/indent': ['off'],
-    '@typescript-eslint/no-var-requires': ['off'],
-    '@typescript-eslint/explicit-function-return-type': ['off'],
+    'react/display-name': ['warn'], // Component definition is missing display name
+    'react/no-unescaped-entities': ['warn'],
+    'react/prop-types': ['warn', { ignore: ['children'] }], // 'something' is missing in props validation
+    'react/react-in-jsx-scope': ['warn'], // 'React' must be in scope when using JSX
+    'react-hooks/rules-of-hooks': ['warn'], // Vérifie les règles des Hooks
+    'react-hooks/exhaustive-deps': ['warn'], // Vérifie les tableaux de dépendances
+    '@typescript-eslint/no-unused-vars': ['warn'],
+    'no-unused-vars': ['warn'], // checks vars
+    'no-underscore-dangle': ['off'], // check underscore
+    'no-console': ['warn'], // check if console.log
+    '@typescript-eslint/no-var-requires': ['warn'], // Require statement not part of import statement
+    '@typescript-eslint/explicit-function-return-type': ['warn'],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -74,11 +73,11 @@ module.exports = {
         default: 'array-simple'
       }
     ],
-    '@typescript-eslint/explicit-function-return-type': ['off'],
-    '@typescript-eslint/explicit-member-accessibility': ['off'],
-    '@typescript-eslint/no-explicit-any': ['off'],
-    '@typescript-eslint/explicit-module-boundary-types': ['off'],
-    '@typescript-eslint/ban-ts-comment': ['off'],
+    '@typescript-eslint/explicit-function-return-type': ['off'], // Missing return type on function
+    '@typescript-eslint/explicit-module-boundary-types': ['off'], // Missing return type on function / Argument 'req' should be typed
+    '@typescript-eslint/explicit-member-accessibility': ['off'], // Missing accessibility modifier on method definition getInitialProps
+    '@typescript-eslint/no-explicit-any': ['off'], // Unexpected any. Specify a different type
+    '@typescript-eslint/ban-ts-comment': ['warn'], // Do not use "@ts-ignore" because it alters compilation errors
     'import/no-unresolved': ['warn'],
     quotes: [2, 'single', { avoidEscape: true }],
     'jsx-a11y/media-has-caption': ['off'],
