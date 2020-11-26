@@ -1,7 +1,7 @@
 import type { DefaultTheme } from 'styled-components';
 import type { Breakpoints } from 'types/styled-components/theme';
 
-import { colors } from 'styles/Modules';
+import colors from 'styles/Modules/Colors';
 import { pxToRem } from 'styles/Modules/Mixins';
 import typography from 'styles/Themes/Typography';
 

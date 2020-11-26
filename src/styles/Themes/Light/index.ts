@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'styled-components';
 
-import { colors } from 'styles/Modules';
+import colors from 'styles/Modules/Colors';
 import baseTheme from 'styles/Themes/Base';
 
 const theme: DefaultTheme = {
