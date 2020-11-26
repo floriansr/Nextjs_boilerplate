@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import Router from 'next/router';
 
@@ -13,24 +13,28 @@ interface NextNProgressPropsTypes {
   options?: Partial<NProgressOptions>;
 }
 
-const NextNProgress = (props: NextNProgressPropsTypes) => {
-  let timer: NodeJS.Timeout | null = null;
+const NextNProgress: React.FC<NextNProgressPropsTypes> = ({
+  color,
+  height,
+  startPosition,
+  stopDelayMs,
+  options
+}: NextNProgressPropsTypes) => {
+  const timer = useRef<NodeJS.Timeout | undefined>();
 
   const routeChangeStart = useCallback(() => {
-    NProgress.set(props.startPosition);
+    NProgress.set(startPosition);
     NProgress.start();
-  }, [props.startPosition]);
+  }, [startPosition]);
 
   const routeChangeEnd = useCallback(() => {
-    timer && clearTimeout(timer);
-    timer = global.setTimeout(() => {
+    timer && clearTimeout(timer.current);
+    timer.current = global.setTimeout(() => {
       NProgress.done(true);
-    }, props.stopDelayMs);
-  }, [props.stopDelayMs]);
+    }, stopDelayMs);
+  }, [stopDelayMs]);
 
   useEffect(() => {
-    const { options } = props;
-
     if (options) {
       NProgress.configure(options);
     }
@@ -39,15 +43,13 @@ const NextNProgress = (props: NextNProgressPropsTypes) => {
     Router.events.on('routeChangeComplete', routeChangeEnd);
     Router.events.on('routeChangeError', routeChangeEnd);
 
-    return () => {
-      clearTimeout(timer);
+    return (): void => {
+      clearTimeout(timer.current);
       Router.events.off('routeChangeStart', routeChangeStart);
       Router.events.off('routeChangeComplete', routeChangeEnd);
       Router.events.off('routeChangeError', routeChangeEnd);
     };
-  }, []);
-
-  const { color, height } = props;
+  }, [options, routeChangeStart, routeChangeEnd, timer]);
 
   return (
     <style jsx global>{`
