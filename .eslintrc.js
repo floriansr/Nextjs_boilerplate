@@ -77,7 +77,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': ['off'], // Missing return type on function / Argument 'req' should be typed
     '@typescript-eslint/explicit-member-accessibility': ['off'], // Missing accessibility modifier on method definition getInitialProps
     '@typescript-eslint/no-explicit-any': ['off'], // Unexpected any. Specify a different type
-    '@typescript-eslint/ban-ts-comment': ['warn'], // Do not use "@ts-ignore" because it alters compilation errors
+    '@typescript-eslint/ban-ts-comment': ['off'], // Do not use "@ts-ignore" because it alters compilation errors
     'import/no-unresolved': ['warn'],
     quotes: [2, 'single', { avoidEscape: true }],
     'jsx-a11y/media-has-caption': ['off'],
