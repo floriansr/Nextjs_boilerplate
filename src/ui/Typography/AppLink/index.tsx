@@ -47,7 +47,7 @@ const AppLink = React.forwardRef<any, Props>(
       applyFilterOnHover = true,
       passHref = true,
       ...rest
-    },
+    }: Props,
     ref
   ) => {
     return (
