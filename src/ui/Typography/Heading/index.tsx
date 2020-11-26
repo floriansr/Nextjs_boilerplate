@@ -28,7 +28,7 @@ type Props = Omit<AppBoxOwnProps, 'size' | 'as'> & {
 };
 
 const Heading = React.forwardRef<any, Props>(
-  ({ children, size = 'xl', as = 'h2', ...rest }, ref) => {
+  ({ children, size = 'xl', as = 'h2', ...rest }: Props, ref) => {
     return (
       <AppBox
         ref={ref}
