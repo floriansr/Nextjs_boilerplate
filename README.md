@@ -6,30 +6,34 @@ Strict mode into tsconfig.json is ON.
 
 * * *
 
-## Getting Started
-
-Clone repo and check scripts for install / test / build / format / lint
+### Getting Started
 
 ```
 yarn install
 ```
 
+## Test with Jest
 ```
-yarn test
+yarn add @testing-library/jest-dom @testing-library/react babel-jest jest jest-styled-components ts-jest && yarn add -D @types/jest
+touch jest.config.js tsconfig.jest.json setupTest.ts .babelrc
 ```
 
+## Set ESLint
 ```
 yarn lint
 ```
 
+## Set Prettier
 ```
 yarn format
 ```
 
+## Set build
 ```
 yarn build
 ```
 
+## Set server
 ```
 yarn dev
 ```
