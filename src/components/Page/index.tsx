@@ -36,6 +36,7 @@ const Page: NextPage<Props> = ({
   ...rest
 }: Props) =>
   React.createElement(
+    // @ts-ignore
     motion[as],
     {
       exit: 'exit',
