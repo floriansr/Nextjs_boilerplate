@@ -14,4 +14,6 @@ const NpTopProgressBar = React.memo(() => {
   );
 });
 
+NpTopProgressBar.displayName = 'NpTopProgressBar';
+
 export default NpTopProgressBar;
