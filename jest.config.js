@@ -11,6 +11,8 @@ const config = {
       tsconfig: 'tsconfig.jest.json'
     }
   },
+  // collectCoverage: true,
+  // collectCoverageFrom: ['src/**/*.ts(x)?'],
   rootDir: '.',
   clearMocks: true,
   setupFilesAfterEnv: ['<rootDir>/setupTest.ts'],
