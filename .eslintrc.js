@@ -1,13 +1,13 @@
 module.exports = {
   root: true, // Make sure eslint picks up the config at the root of the directory
   parser: '@typescript-eslint/parser',
-  plugins: ['simple-import-sort', 'import', 'react-hooks', '@typescript-eslint'],
-  parserOptions: {
-    ecmaVersion: 2020, // Use the latest ecmascript standard
-    sourceType: 'module', // Allows using import/export statements
-    ecmaFeatures: {
-      jsx: true // Enable JSX since we're using React
-    }
+  plugins: ['react', 'react-hooks', 'import', '@typescript-eslint', 'simple-import-sort'],
+  env: {
+    browser: true, // Enables browser globals like window and document
+    amd: true, // Enables require() and define() as global variables as per the amd spec.
+    node: true, // Enables Node.js global variables and Node.js scoping.
+    es6: true,
+    jest: true
   },
   settings: {
     'import/parsers': {
@@ -22,16 +22,17 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts']
       },
       typescript: {
-        project: ['src']
+        project: ['src'],
+        alwaysTryTypes: true
       }
     }
   },
-  env: {
-    browser: true, // Enables browser globals like window and document
-    amd: true, // Enables require() and define() as global variables as per the amd spec.
-    node: true, // Enables Node.js global variables and Node.js scoping.
-    es6: true,
-    jest: true
+  parserOptions: {
+    ecmaVersion: 2020, // Use the latest ecmascript standard
+    sourceType: 'module', // Allows using import/export statements
+    ecmaFeatures: {
+      jsx: true // Enable JSX since we're using React
+    }
   },
   extends: [
     'plugin:react/recommended',
@@ -78,7 +79,6 @@ module.exports = {
     '@typescript-eslint/explicit-member-accessibility': ['off'], // Missing accessibility modifier on method definition getInitialProps
     '@typescript-eslint/no-explicit-any': ['off'], // Unexpected any. Specify a different type
     '@typescript-eslint/ban-ts-comment': ['off'], // Do not use "@ts-ignore" because it alters compilation errors
-    'import/no-unresolved': ['warn'],
     quotes: [2, 'single', { avoidEscape: true }],
     'jsx-a11y/media-has-caption': ['off'],
     'jsx-a11y/label-has-associated-control': [
@@ -98,6 +98,7 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton']
       }
     ],
+    'import/no-unresolved': ['warn'], // turn on warnings for missing imports
     'simple-import-sort/imports': [
       'error',
       {
