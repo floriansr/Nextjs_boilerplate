@@ -10,11 +10,11 @@ module.exports = {
     jest: true
   },
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
-    },
     react: {
       version: 'detect' // Automatically detect the react version
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
     },
     'import/resolver': {
       node: {
@@ -44,20 +44,20 @@ module.exports = {
     'plugin:prettier/recommended' // Make this the last element so prettier config overrides other formatting rules
   ],
   rules: {
-    'react/display-name': ['warn'], // Component definition is missing display name
-    'react/no-unescaped-entities': ['warn'],
-    'react/prop-types': ['warn', { ignore: ['children'] }], // 'something' is missing in props validation
-    'react/react-in-jsx-scope': ['warn'], // 'React' must be in scope when using JSX
-    'react-hooks/rules-of-hooks': ['warn'], // Vérifie les règles des Hooks
-    'react-hooks/exhaustive-deps': ['warn'], // Vérifie les tableaux de dépendances
-    '@typescript-eslint/no-unused-vars': ['warn'],
-    'no-unused-vars': ['warn'], // checks vars
-    'no-underscore-dangle': ['off'], // check underscore
-    'no-console': ['warn'], // check if console.log
-    '@typescript-eslint/no-var-requires': ['warn'], // Require statement not part of import statement
-    '@typescript-eslint/explicit-function-return-type': ['warn'],
+    'react/display-name': 1, // Component definition is missing display name
+    'react/no-unescaped-entities': 1,
+    'react/prop-types': [1, { ignore: ['children'] }], // 'something' is missing in props validation
+    'react/react-in-jsx-scope': 1, // 'React' must be in scope when using JSX
+    'react-hooks/rules-of-hooks': 1, // Vérifie les règles des Hooks
+    'react-hooks/exhaustive-deps': 1, // Vérifie les tableaux de dépendances
+    '@typescript-eslint/no-unused-vars': 1,
+    'no-unused-vars': 1, // checks vars
+    'no-underscore-dangle': 0, // check underscore
+    'no-console': 1, // check if console.log
+    '@typescript-eslint/no-var-requires': 1, // Require statement not part of import statement
+    '@typescript-eslint/explicit-function-return-type': 1,
     '@typescript-eslint/member-delimiter-style': [
-      'error',
+      2,
       {
         multiline: {
           delimiter: 'semi',
@@ -69,20 +69,20 @@ module.exports = {
       }
     ],
     '@typescript-eslint/array-type': [
-      'error',
+      2,
       {
         default: 'array-simple'
       }
     ],
-    '@typescript-eslint/explicit-function-return-type': ['off'], // Missing return type on function
-    '@typescript-eslint/explicit-module-boundary-types': ['off'], // Missing return type on function / Argument 'req' should be typed
-    '@typescript-eslint/explicit-member-accessibility': ['off'], // Missing accessibility modifier on method definition getInitialProps
-    '@typescript-eslint/no-explicit-any': ['off'], // Unexpected any. Specify a different type
-    '@typescript-eslint/ban-ts-comment': ['off'], // Do not use "@ts-ignore" because it alters compilation errors
+    '@typescript-eslint/explicit-function-return-type': 0, // Missing return type on function
+    '@typescript-eslint/explicit-module-boundary-types': 0, // Missing return type on function / Argument 'req' should be typed
+    '@typescript-eslint/explicit-member-accessibility': 0, // Missing accessibility modifier on method definition getInitialProps
+    '@typescript-eslint/no-explicit-any': 0, // Unexpected any. Specify a different type
+    '@typescript-eslint/ban-ts-comment': 0, // Do not use "@ts-ignore" because it alters compilation errors
     quotes: [2, 'single', { avoidEscape: true }],
-    'jsx-a11y/media-has-caption': ['off'],
+    'jsx-a11y/media-has-caption': 0,
     'jsx-a11y/label-has-associated-control': [
-      'warn',
+      1,
       {
         labelComponents: [],
         labelAttributes: [],
@@ -91,16 +91,16 @@ module.exports = {
       }
     ],
     'jsx-a11y/anchor-is-valid': [
-      'error',
+      2,
       {
         components: ['Link'],
         specialLink: ['hrefLeft', 'hrefRight'],
         aspects: ['invalidHref', 'preferButton']
       }
     ],
-    'import/no-unresolved': ['warn'], // turn on warnings for missing imports
+    'import/no-unresolved': 1, // turn on warnings for missing imports
     'simple-import-sort/imports': [
-      'error',
+      2,
       {
         groups: [
           ['^react'],
@@ -116,6 +116,6 @@ module.exports = {
         ]
       }
     ],
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }] // Use our .prettierrc file as source
+    'prettier/prettier': [2, {}, { usePrettierrc: true }] // Use our .prettierrc file as source
   }
 };
