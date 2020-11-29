@@ -1,43 +1,18 @@
-### NextJS - TypeScript - Redux Wrapper Boilerplate
+### STARTER NextJS-TS-Jest-UI
 
-Inspired from this repo [here](https://github.com/Liinkiing/next-ts-starter)
+Inspired by these repos [here](https://github.com/Liinkiing/next-ts-starter) && [here] (https://github.com/layshidani/react-avancado-boilerplate)
 
-Strict mode into tsconfig.json is ON.
+If you have difficulties with types atm, you can disable strict mode (tsconfig.json).
 
 * * *
 
 ### Getting Started
 
 ```
-yarn install
+yarn all
 ```
 
-## Test with Jest
-```
-yarn add @testing-library/jest-dom @testing-library/react babel-jest jest jest-styled-components ts-jest && yarn add -D @types/jest
-touch jest.config.js tsconfig.jest.json setupTest.ts .babelrc
-```
-
-## Set ESLint
-```
-yarn lint
-```
-
-## Set Prettier
-```
-yarn format
-```
-
-## Set build
-```
-yarn build
-```
-
-## Set server
-```
-yarn dev
-```
-
+This command will installs the dependencies, build, checks the typing & coverage, launches eslint, formats with prettier, tests with jest and finally launches the server.
 
 
 ## Author
