@@ -1,9 +1,21 @@
 {
+  "presets": ["next/babel", "@babel/preset-typescript"],
   "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true,
+            "displayName": true
+          }
+        ]
+      ]
+    },
     "production": {
       "plugins": [
         [
-          "styled-components",
+          "babel-plugin-styled-components",
           {
             "ssr": true,
             "displayName": false,
@@ -13,10 +25,9 @@
       ]
     }
   },
-  "presets": ["next/babel"],
   "plugins": [
     [
-      "styled-components",
+      "babel-plugin-styled-components",
       {
         "ssr": true,
         "displayName": true,
