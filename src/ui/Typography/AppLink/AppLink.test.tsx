@@ -26,7 +26,7 @@ describe('<AppLink />', () => {
   });
 
   it('should render as the specified node in the as & color theme provider', () => {
-    const { container } = render(<AppLink href="/" color="red"/>);
+    const { container } = render(<AppLink href="/" color="red" />);
     expect(container.firstChild?.nodeName).toBe('A');
     expect(container.firstChild).toHaveStyle({
       color: 'red',
