@@ -1,23 +1,27 @@
 import * as React from 'react';
 
-import { describe, expect, it } from '@jest/globals';
 import { render } from '@testing-library/react';
 
 import AppBox from './index';
 
 describe('<AppBox />', () => {
-  const CONTENT = 'Hi I am the content';
+  const TEXT = 'Hello world';
 
-  it('should render as a div', () => {
-    const { getByText } = render(<AppBox>{CONTENT}</AppBox>);
-    expect(getByText(CONTENT).nodeName).toBe('DIV');
+  it('AppBox tree', () => {
+    const tree = render(<AppBox />);
+    expect(tree).toMatchSnapshot();
   });
 
-  it('should render as the specified node in the as prop', () => {
-    const wrapper = render(<AppBox as="span">{CONTENT}</AppBox>);
-    expect(wrapper.getByText(CONTENT).nodeName).toBe('SPAN');
+  it('should render as a div', () => {
+    const { container } = render(<AppBox>{TEXT}</AppBox>);
+    expect(container.firstChild?.nodeName).toBe('DIV');
+  });
 
-    wrapper.rerender(<AppBox as="p">{CONTENT}</AppBox>);
-    expect(wrapper.getByText(CONTENT).nodeName).toBe('P');
+  it('should render as the specified node in the as prop then rerender component', () => {
+    const tree = render(<AppBox as="span">{TEXT}</AppBox>);
+    expect(tree.getByText(TEXT).nodeName).toBe('SPAN');
+
+    tree.rerender(<AppBox as="p">{TEXT}</AppBox>);
+    expect(tree.getByText(TEXT).nodeName).toBe('P');
   });
 });
