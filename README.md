@@ -15,6 +15,6 @@ This command will installs dependencies, build env, checks types and coverage, l
 
 ## Author
 
--   **@floriansr** - (https://github.com/floriansr)
+-   **@floriansr** - [go to my profile](https://github.com/floriansr)
 
 Inspired by these contributors : [Liinkiing](https://github.com/Liinkiing/next-ts-starter) & [layshidani](https://github.com/layshidani/react-avancado-boilerplate)
