@@ -1,12 +1,2 @@
 checks:
-  - name: build-size-watcher
-    options:
-      gzip: false
-      files:
-        - path: '.next/static/**/*.js'
-
-  - name: lighthouse-keeper
-    options:
-      buildPath: './next'
-      
   - name: typecov
