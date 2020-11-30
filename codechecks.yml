@@ -4,3 +4,12 @@ checks:
       gzip: false
       files:
         - path: ".next/static/**/*.js"
+  - name: commit-deployment
+    options:
+      buildPath: ./next/static
+  - name: type-coverage-watcher
+    options:
+      ignoreCatch: true
+      ignoreFiles:
+        - ./next
+      strict: true
