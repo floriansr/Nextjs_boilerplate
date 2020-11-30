@@ -17,6 +17,6 @@ install:
 script:
   - yarn coveralls
 after_script:
-  - yarn add -D @codechecks/client @codechecks/build-size-watcher @codechecks/lighthouse-keeper typecov -W
+  - yarn add -D @codechecks/client typecov
   - yarn build
   - yarn codechecks
