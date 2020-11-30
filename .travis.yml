@@ -1,17 +1,18 @@
 language: node_js
 node_js:
- - '15'
- branches:
-  only:
+  - '15'
+branches:
+only:
   - master
+  - develop
 cache:
- yarn: true
-  directories:
+yarn: true
+directories:
   - node_modules
 before_install:
-- yarn update
+  - yarn upgrade
 install:
-- yarn
+  - yarn
 script:
-- yarn test
-- yarn coveralls
+  - yarn test
+  - yarn coveralls

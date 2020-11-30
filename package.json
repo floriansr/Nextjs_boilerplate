@@ -14,7 +14,7 @@
     "test:watch": "yarn test --watch",
     "ts:coverage": "yarn type-coverage",
     "ts:check": "tsc --noEmit",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
+    "coveralls": "jest --runInBand --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
