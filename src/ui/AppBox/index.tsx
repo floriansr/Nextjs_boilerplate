@@ -34,7 +34,17 @@ import { SPACES_SCALES } from 'styles/Themes/Base';
 
 type AppBoxHTMLProps = RefAttributes<any> & HTMLAttributes<any>;
 
-type FontSizeValues = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
+type FontSizeValues =
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | '2xl'
+  | '3xl'
+  | '4xl'
+  | '5xl'
+  | '6xl';
 
 export enum FontSize {
   Xs = 'xs',
@@ -88,7 +98,14 @@ interface AppFontWeight {
     | FontWeightProps['fontWeight'];
 }
 
-type LineHeightValues = 'normal' | 'none' | 'shorter' | 'short' | 'base' | 'tall' | 'taller';
+type LineHeightValues =
+  | 'normal'
+  | 'none'
+  | 'shorter'
+  | 'short'
+  | 'base'
+  | 'tall'
+  | 'taller';
 
 export enum LineHeight {
   Normal = 'normal',
@@ -108,7 +125,13 @@ interface AppLineHeight {
     | LineHeightProps['lineHeight'];
 }
 
-type LetterSpacingValues = 'tighter' | 'tight' | 'normal' | 'wide' | 'wider' | 'widest';
+type LetterSpacingValues =
+  | 'tighter'
+  | 'tight'
+  | 'normal'
+  | 'wide'
+  | 'wider'
+  | 'widest';
 
 export enum LetterSpacing {
   Tighter = 'tighter',
@@ -142,12 +165,17 @@ type StyledSystemProps = ColorProps &
   PositionProps &
   AppTypographyProps;
 
-type ModifiedStyledSystemProps = AppFontSize & AppLetterSpacing & AppFontWeight & AppLineHeight;
+type ModifiedStyledSystemProps = AppFontSize &
+  AppLetterSpacing &
+  AppFontWeight &
+  AppLineHeight;
 
 interface CustomBoxProps {
   readonly uppercase?: boolean;
   readonly css?:
-    | ((props: { theme: DefaultTheme } & Record<string, any>) => Record<string, unknown>)
+    | ((
+        props: { theme: DefaultTheme } & Record<string, any>
+      ) => Record<string, unknown>)
     | ReturnType<typeof css>
     | Record<string, unknown>;
   readonly ref?: any;
@@ -167,10 +195,12 @@ export interface AppBoxOwnProps<E extends React.ElementType = React.ElementType>
   as?: E;
 }
 
-export type PolymorphicBoxProps<E extends React.ElementType> = AppBoxOwnProps<E> &
-  Omit<PropsOf<E>, keyof AppBoxOwnProps>;
+export type PolymorphicBoxProps<
+  E extends React.ElementType
+> = AppBoxOwnProps<E> & Omit<PropsOf<E>, keyof AppBoxOwnProps>;
 
-export type PolymorphicComponentProps<E extends React.ElementType, P> = P & PolymorphicBoxProps<E>;
+export type PolymorphicComponentProps<E extends React.ElementType, P> = P &
+  PolymorphicBoxProps<E>;
 
 const defaultElement = 'div';
 
@@ -207,11 +237,15 @@ const AppBox = styled('div').withConfig({
 
 AppBox.displayName = 'AppBox';
 
-export type PolymorphicAppBox = <E extends React.ElementType = typeof defaultElement>(
+export type PolymorphicAppBox = <
+  E extends React.ElementType = typeof defaultElement
+>(
   props: PolymorphicBoxProps<E>
 ) => JSX.Element;
 
-export type PolymorphicComponent<P> = <E extends React.ElementType = typeof defaultElement>(
+export type PolymorphicComponent<P> = <
+  E extends React.ElementType = typeof defaultElement
+>(
   props: PolymorphicComponentProps<E, P>
 ) => JSX.Element;
 

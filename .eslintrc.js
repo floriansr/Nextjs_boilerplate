@@ -1,7 +1,13 @@
 module.exports = {
   root: true, // Make sure eslint picks up the config at the root of the directory
   parser: '@typescript-eslint/parser',
-  plugins: ['react', 'react-hooks', 'import', '@typescript-eslint', 'simple-import-sort'],
+  plugins: [
+    'react',
+    'react-hooks',
+    'import',
+    '@typescript-eslint',
+    'simple-import-sort'
+  ],
   env: {
     browser: true, // Enables browser globals like window and document
     amd: true, // Enables require() and define() as global variables as per the amd spec.

@@ -44,7 +44,9 @@ const Page: NextPage<Props> = ({
       animate: 'enter',
       className: 'router__wrapper'
     },
-    <PageInner {...rest} {...(noDefaultTransition ? {} : { variants: DefaultRouterPageVariants })}>
+    <PageInner
+      {...rest}
+      {...(noDefaultTransition ? {} : { variants: DefaultRouterPageVariants })}>
       {children}
     </PageInner>
   );

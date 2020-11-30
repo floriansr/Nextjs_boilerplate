@@ -27,7 +27,9 @@ const AppLinkInner = styled(AppBox)<OwnProps>`
     props.applyActiveLinkStyles &&
     css`
       color: ${(props) => props.theme.colors.link};
-      ${(props) => (props as any).activeLinkStyles && css((props as any).activeLinkStyles)};
+      ${(props) =>
+        (props as any).activeLinkStyles &&
+        css((props as any).activeLinkStyles)};
     `}
 `;
 
