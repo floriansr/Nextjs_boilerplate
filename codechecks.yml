@@ -7,7 +7,7 @@ checks:
 
   - name: lighthouse-keeper
     options:
-      buildPath: ./next
+      buildPath: './next'
       
   - name: typecov
     options:
