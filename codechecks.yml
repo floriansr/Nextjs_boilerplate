@@ -3,11 +3,4 @@ checks:
     options:
       gzip: false
       files:
-        - path: "src/**/*.ts"
-        - path: "src/**/*.d.ts"
-        - path: "src/**/*.tsx"
-        - path: "public/*.ico"
-        - path: "public/*.svg"
-        - path: "*.js"
-        - path: "*.d.ts"
-        - path: "*.json"
+        - path: ".next/static/**/*.js"
