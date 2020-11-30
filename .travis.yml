@@ -1,16 +1,18 @@
 language: node_js
 node_js: 15
-cache: yarn
 
 branches:
 only:
   - master
   - develop
   - codechecks
-directories:
-  - node_modules
-before_install:
-  - yarn upgrade
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - $HOME/.cache/yarn
+    - ~/.cache
+    - .next/cache 
 install:
   - yarn
 script:
