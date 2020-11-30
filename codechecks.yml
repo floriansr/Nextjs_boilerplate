@@ -1,7 +1,13 @@
 checks:
   - name: build-size-watcher
-  - name: commit-deployment
-  - name: type-coverage-watcher
     options:
-      ignoreCatch: true
-      strict: true
+      gzip: false
+      files:
+        - path: "src/**/*.ts"
+        - path: "src/**/*.d.ts"
+        - path: "src/**/*.tsx"
+        - path: "public/*.ico"
+        - path: "public/*.svg"
+        - path: "*.js"
+        - path: "*.d.ts"
+        - path: "*.json"

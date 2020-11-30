@@ -11,7 +11,7 @@ cache:
   directories:
     - node_modules
     - $HOME/.cache/yarn
-    - .next/cache 
+    - .next/cache
 install:
   - yarn
 script:
