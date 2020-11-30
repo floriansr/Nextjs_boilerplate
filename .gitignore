@@ -10,6 +10,9 @@ package-lock.json
 /.next/
 /out/
 
+# test
+coverage
+
 # production
 /build
 
