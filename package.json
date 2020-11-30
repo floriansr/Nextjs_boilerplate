@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "codechecks": "codechecks",
+    "type-coverage": "type-coverage",
     "all": "yarn && yarn build && yarn format && yarn lint && yarn ts:check && yarn coverage && yarn test && yarn test:ci && yarn dev",
     "dev": "next dev",
     "build": "next build",
@@ -68,6 +70,12 @@
     "next-images": "^1.6.2",
     "nprogress": "^0.2.0",
     "prettier": "^2.2.0"
+  },
+  "typeCoverage": {
+    "atLeast": 95,
+    "detail": true,
+    "ignoreCatch": true,
+    "strict": true
   },
   "author": "Florian Sueur",
   "license": "MIT"
