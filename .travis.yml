@@ -5,6 +5,7 @@ branches:
 only:
   - master
   - develop
+  - codechecks
 cache:
 yarn: true
 directories:
