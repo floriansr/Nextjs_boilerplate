@@ -3,17 +3,19 @@ checks:
     options:
       gzip: false
       files:
-        - path: ".next/static/**/*.js"
+        - path: '.next/static/**/*.js'
+
   - name: type-coverage-watcher
     options:
       ignoreCatch: true
       ignoreFiles:
         - ./next
       strict: true
-    - name: lighthouse-keeper
+
+  - name: lighthouse-keeper
     options:
       buildPath: ./next
-    - name: typecov
-      options:
-        atLeast: 95   
       
+  - name: typecov
+    options:
+      atLeast: 95

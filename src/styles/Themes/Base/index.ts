@@ -32,7 +32,12 @@ export const SPACES_SCALES = [
 const baseTheme: Partial<DefaultTheme> = {
   ...typography,
   colors: colors as any,
-  breakpoints: [breakpoints.tablet, breakpoints.desktop, breakpoints.wide, breakpoints.ultraWide],
+  breakpoints: [
+    breakpoints.tablet,
+    breakpoints.desktop,
+    breakpoints.wide,
+    breakpoints.ultraWide
+  ],
   mediaQueries: {
     tablet: `@media screen and (min-width: ${breakpoints.tablet})`,
     desktop: `@media screen and (min-width: ${breakpoints.desktop})`,

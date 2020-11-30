@@ -49,6 +49,9 @@ describe('<Heading />', () => {
       </Heading>
     );
     expect(container.firstChild?.nodeName).toBe('H6');
-    expect(container.firstChild).toHaveStyle({ color: 'blue', 'font-size': '.67em' });
+    expect(container.firstChild).toHaveStyle({
+      color: 'blue',
+      'font-size': '.67em'
+    });
   });
 });

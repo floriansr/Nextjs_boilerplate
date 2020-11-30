@@ -17,7 +17,9 @@ const config = {
   clearMocks: true,
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/'
+  }),
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   transformIgnorePatterns: ['/node_modules/'],
   preset: 'ts-jest',

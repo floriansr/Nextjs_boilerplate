@@ -55,7 +55,8 @@ export const customScrollbar = css`
   }
 
   ::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 ${SCROLLBAR_WIDTH}px ${SCROLLBAR_WIDTH}px rgba(187, 187, 190, 0.38);
+    box-shadow: inset 0 0 ${SCROLLBAR_WIDTH}px ${SCROLLBAR_WIDTH}px
+      rgba(187, 187, 190, 0.38);
     border: solid ${SCROLLBAR_WIDTH - 10}px transparent;
     border-radius: ${SCROLLBAR_WIDTH}px;
   }
