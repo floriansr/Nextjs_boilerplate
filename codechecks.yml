@@ -10,3 +10,10 @@ checks:
       ignoreFiles:
         - ./next
       strict: true
+    - name: lighthouse-keeper
+    options:
+      buildPath: ./next
+    - name: typecov
+      options:
+        atLeast: 95   
+      
