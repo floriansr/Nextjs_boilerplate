@@ -18,3 +18,5 @@ This command will installs dependencies, build env, checks types and coverage, l
 -   **@floriansr** - [go to my profile](https://github.com/floriansr)
 
 Inspired by these contributors : [Liinkiing](https://github.com/Liinkiing/next-ts-starter) & [layshidani](https://github.com/layshidani/react-avancado-boilerplate)
+
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
