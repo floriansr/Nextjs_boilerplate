@@ -16,3 +16,7 @@ install:
   - yarn
 script:
   - yarn coveralls
+after_script:
+  - yarn add -D @codechecks/client @codechecks/build-size-watcher @codechecks/commit-deployment @codechecks/type-coverage-watcher -W
+  - yarn build
+  - yarn codechecks
