@@ -17,6 +17,6 @@ install:
 script:
   - yarn coveralls
 after_script:
-  - yarn add -D @codechecks/client typecov
+  - yarn add -D @codechecks/client typecov -W
   - yarn build
   - yarn codechecks
