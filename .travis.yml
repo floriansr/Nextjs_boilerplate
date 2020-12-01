@@ -5,18 +5,19 @@ branches:
 only:
   - master
   - develop
-  - codechecks
 cache:
   yarn: true
   directories:
     - node_modules
-    - $HOME/.cache/yarn
     - .next/cache
+before_install:
+  - yarn upgrade
+  - pip install --user codecov
+
 install:
   - yarn
 script:
-  - yarn coveralls
-after_script:
-  - yarn add -D @codechecks/client @codechecks/build-size-watcher @codechecks/lighthouse-keeper typecov -W
-  - yarn build
-  - yarn codechecks
+  - yarn test
+
+after_success:
+  - codecov --file coverage/lcov.info --disable search
