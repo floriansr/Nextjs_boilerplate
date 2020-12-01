@@ -8,14 +8,25 @@ If you have difficulties with types atm, you can disable strict mode (tsconfig.j
 
 * * *
 
-## Getting Started
+## Useful scripts
 
 ```
-yarn all
+yarn test:watch
+```
+It will open jest console without coverage
+
+```
+yarn ts:check
 ```
 
-This command will installs dependencies, build env, checks types and coverage, launches eslint, formats with prettier, tests with jest and finally launches the server on localhost:3000.
+It will check TS bugs
 
+
+```
+yarn ts:coverage
+```
+
+It will check TS types coverage (score atm (01/12/2020): 1498 / 1506 **99.46%**)
 
 ## Author
 
