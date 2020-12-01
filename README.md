@@ -1,6 +1,7 @@
 ### STARTER NextJS-TS-Jest-UI
 
 [![Build Status](https://travis-ci.com/floriansr/Nextjs_boilerplate.svg?branch=master)](https://travis-ci.com/floriansr/Nextjs_boilerplate)
+[![codecov](https://codecov.io/gh/floriansr/Nextjs_boilerplate/branch/master/graph/badge.svg?token=OGLFAX4C1K)](https://codecov.io/gh/floriansr/Nextjs_boilerplate)
 
 
 If you have difficulties with types atm, you can disable strict mode (tsconfig.json).
