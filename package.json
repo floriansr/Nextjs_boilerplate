@@ -3,18 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "all": "yarn && yarn build && yarn format && yarn lint && yarn ts:check && yarn coverage && yarn test && yarn test:ci && yarn dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.test.tsx .",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,json,babelrc,test.tsx,yml}' --config ./.prettierrc",
-    "test": "jest --runInBand",
+    "test": "jest --runInBand --coverage",
     "test:ci": "yarn test --ci",
     "test:watch": "yarn test --watch",
-    "ts:coverage": "yarn type-coverage",
     "ts:check": "tsc --noEmit",
-    "coveralls": "jest --runInBand --coverage && cat ./coverage/lcov.info | coveralls"
+    "ts:coverage": "yarn type-coverage"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
@@ -52,7 +50,6 @@
     "@typescript-eslint/parser": "^4.8.1",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
-    "coveralls": "^3.1.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
