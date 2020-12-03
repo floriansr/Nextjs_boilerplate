@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+
 import type { DefaultTheme } from 'styled-components';
 import type { Breakpoints } from 'types/styled-components/theme';
 
