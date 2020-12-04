@@ -4,9 +4,9 @@ exports[`<AppLink /> AppLink tree 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
-  color: link;
   font-weight: semibold;
   font-family: body;
+  color: link;
   line-height: base;
 }
 
@@ -31,7 +31,7 @@ Object {
   </body>,
   "container": <div>
     <a
-      class="sc-bdfBwQ sc-gsTCUz cFqbSo dFcqAH"
+      class="sc-bdfBwQ sc-gsTCUz kjBXQw dFcqAH"
       href="/"
     />
   </div>,
