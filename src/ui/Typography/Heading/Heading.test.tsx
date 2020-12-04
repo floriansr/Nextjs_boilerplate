@@ -54,4 +54,11 @@ describe('<Heading />', () => {
       'font-size': '.67em'
     });
   });
+
+  it('Heading component with truncate', () => {
+    const { container } = render(<Heading truncate={10}>{TEXT}</Heading>);
+    expect(container.firstElementChild?.textContent).toBe(
+      TEXT.slice(0, 10) + '…'
+    );
+  });
 });
