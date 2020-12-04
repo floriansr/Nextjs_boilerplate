@@ -1,6 +1,10 @@
 import type { HTMLAttributes, RefAttributes } from 'react';
 import * as React from 'react';
-import styled, { css, DefaultTheme } from 'styled-components';
+
+import shouldForwardProp from '@styled-system/should-forward-prop';
+import * as CSS from 'csstype';
+import type { DefaultTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   border,
   BorderProps,
@@ -23,7 +27,8 @@ import {
   typography,
   TypographyProps
 } from 'styled-system';
-import shouldForwardProp from '@styled-system/should-forward-prop';
+
+import { ThemeColorsValues } from 'styles/Modules/Colors';
 import {
   SPACES_SCALES,
   ThemeBordersValues,
@@ -31,11 +36,9 @@ import {
   ThemeShadowsValues,
   ThemeZIndicesValues
 } from 'styles/Themes/Base';
-import * as CSS from 'csstype';
-import { ThemeColorsValues } from 'styles/Modules/Colors';
 import {
-  ThemeFontSizesValues,
   ThemeFontFamiliesValue,
+  ThemeFontSizesValues,
   ThemeFontWeightsValues,
   ThemeLetterSpacingsValues,
   ThemeLineHeightsValues
