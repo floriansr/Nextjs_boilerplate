@@ -35,7 +35,7 @@ type Props = Omit<AppBoxOwnProps, 'size' | 'as'> & {
 };
 
 const Heading = React.forwardRef<any, Props>(
-  ({ children, truncate, size = 'xl', as = 'h2', ...rest }, ref) => {
+  ({ children, truncate, size = 'xl', as = 'h2', ...rest }: Props, ref) => {
     let content = children;
     const innerText = jsxInnerText(content);
     if (truncate && innerText.length > truncate) {

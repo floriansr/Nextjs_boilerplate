@@ -29,7 +29,7 @@ type Props = Omit<
 > &
   FlexOptions;
 
-const Flex = React.forwardRef<HTMLElement, Props>((props, ref) => {
+const Flex = React.forwardRef<HTMLElement, Props>((props: Props, ref) => {
   const {
     direction = 'row',
     align,

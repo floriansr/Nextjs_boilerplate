@@ -43,7 +43,7 @@ type Props = Omit<
 > &
   GridOptions;
 
-const Grid = React.forwardRef<HTMLElement, Props>((props, ref) => {
+const Grid = React.forwardRef<HTMLElement, Props>((props: Props, ref) => {
   const {
     templateColumns,
     gap,

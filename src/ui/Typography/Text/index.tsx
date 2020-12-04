@@ -13,7 +13,7 @@ type Props = AppBoxOwnProps & {
 };
 
 const Text = React.forwardRef<HTMLElement, Props>(
-  ({ children, truncate, ...props }, ref) => {
+  ({ children, truncate, ...props }: Props, ref) => {
     let content = children;
     const innerText = jsxInnerText(content);
     if (truncate && innerText.length > truncate) {
