@@ -273,7 +273,7 @@ const colors = {
   }
 } as const;
 
-// folowing to this https://stackoverflow.com/questions/47057649/typescript-string-dot-notation-of-nested-object
+// following to this https://stackoverflow.com/questions/47057649/typescript-string-dot-notation-of-nested-object
 type PathsToStringProps<T> = T extends string
   ? []
   : {
