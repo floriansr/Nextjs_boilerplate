@@ -8,6 +8,8 @@ import AppBox, {
   PolymorphicComponent
 } from 'ui/AppBox';
 
+import jsxInnerText from 'tools/JSX';
+
 export enum HeadingSize {
   Xl = 'xl',
   Lg = 'lg',
@@ -29,10 +31,16 @@ const sizes: { [Key in Size]: ResponsiveValue<string | FontSize> } = {
 type Props = Omit<AppBoxOwnProps, 'size' | 'as'> & {
   readonly as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   readonly size?: HeadingSize | Size;
+  readonly truncate?: number;
 };
 
 const Heading = React.forwardRef<any, Props>(
-  ({ children, size = 'xl', as = 'h2', ...rest }: Props, ref) => {
+  ({ children, truncate, size = 'xl', as = 'h2', ...rest }, ref) => {
+    let content = children;
+    const innerText = jsxInnerText(content);
+    if (truncate && innerText.length > truncate) {
+      content = `${innerText.slice(0, truncate)}…`;
+    }
     return (
       <AppBox
         ref={ref}
@@ -42,7 +50,7 @@ const Heading = React.forwardRef<any, Props>(
         as={as}
         fontSize={sizes[size]}
         {...rest}>
-        {children}
+        {content}
       </AppBox>
     );
   }
