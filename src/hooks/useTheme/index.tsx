@@ -1,4 +1,3 @@
-// @flow
 import { useContext } from 'react';
 
 import { DefaultTheme, ThemeContext } from 'styled-components';
