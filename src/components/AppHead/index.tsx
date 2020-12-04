@@ -60,7 +60,7 @@ const AppHead: React.FC<Props> = ({
 
 AppHead.defaultProps = {
   title:
-    process.env.NEXT_STATIC_APP_NAME ||
+    process.env.NEXT_PUBLIC_APP_NAME ||
     'SSR styled-components with Next.js Starter',
   description: defaultDescription,
   url: defaultOGURL,
