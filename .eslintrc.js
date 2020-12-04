@@ -52,7 +52,7 @@ module.exports = {
   rules: {
     'react/display-name': 1, // Component definition is missing display name
     'react/no-unescaped-entities': 1,
-    'react/prop-types': [1, { ignore: ['children'] }], // 'something' is missing in props validation
+    'react/prop-types': [0, { ignore: ['children'] }], // 'something' is missing in props validation
     'react/react-in-jsx-scope': 1, // 'React' must be in scope when using JSX
     'react-hooks/rules-of-hooks': 1, // Vérifie les règles des Hooks
     'react-hooks/exhaustive-deps': 1, // Vérifie les tableaux de dépendances
