@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.test.tsx .",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,json,babelrc,test.tsx,yml}' --config ./.prettierrc",
-    "test": "jest --runInBand --coverage",
+    "test": "jest --runInBand",
     "test:ci": "yarn test --ci",
     "test:watch": "yarn test --watch",
     "ts:check": "tsc --noEmit",
