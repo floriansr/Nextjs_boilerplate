@@ -23,8 +23,13 @@ const config = {
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   transformIgnorePatterns: ['/node_modules/'],
   preset: 'ts-jest',
-  collectCoverage: false,
-  collectCoverageFrom: ['src/ui/**/*.tsx']
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/ui/AppBox/*.tsx',
+    'src/ui/Typography/Heading/*.tsx',
+    'src/ui/Typography/Text/*.tsx',
+    'src/ui/Typography/AppLink/*.tsx'
+  ]
 };
-
+// 'src/ui/**/*.tsx';
 module.exports = config;
