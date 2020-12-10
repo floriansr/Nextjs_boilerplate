@@ -1,18 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AppLink /> AppLink tree 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": .c0 {
-  font-weight: semibold;
-  font-family: body;
-  color: link;
-  line-height: base;
+exports[`<AppLink /> AppLink passHref 1`] = `
+.c0 {
+  font-weight: 600;
+  font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #2563eb;
+  line-height: 1.5;
 }
 
 .c1 {
   -webkit-transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
   transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
+  color: #2563eb;
+}
+
+.c1:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+<div>
+  <a
+    class="c0 c1"
+    href="/"
+  />
+</div>
+`;
+
+exports[`<AppLink /> AppLink tree 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c0 {
+  font-weight: 600;
+  font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #2563eb;
+  line-height: 1.5;
+}
+
+.c1 {
+  -webkit-transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
+  transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
+  color: #2563eb;
 }
 
 .c1:hover {
@@ -31,7 +60,7 @@ Object {
   </body>,
   "container": <div>
     <a
-      class="sc-bdfBwQ sc-gsTCUz kjBXQw dFcqAH"
+      class="sc-bdfBwQ sc-gsTCUz kXyOeL iWpNvF"
       href="/"
     />
   </div>,
@@ -87,4 +116,60 @@ Object {
   "rerender": [Function],
   "unmount": [Function],
 }
+`;
+
+exports[`<AppLink /> color theme dark 1`] = `
+.c0 {
+  font-weight: 600;
+  font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #60a5fa;
+  line-height: 1.5;
+}
+
+.c1 {
+  -webkit-transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
+  transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
+  color: #60a5fa;
+}
+
+.c1:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+<div>
+  <a
+    class="c0 c1"
+    href="/"
+  />
+</div>
+`;
+
+exports[`<AppLink /> color theme light 1`] = `
+.c0 {
+  font-weight: 600;
+  font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #2563eb;
+  line-height: 1.5;
+}
+
+.c1 {
+  -webkit-transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
+  transition: filter 0.2s ease,opacity 0.2s ease,color 0.3s ease;
+  color: #2563eb;
+}
+
+.c1:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+<div>
+  <a
+    class="c0 c1"
+    href="/"
+  />
+</div>
 `;
