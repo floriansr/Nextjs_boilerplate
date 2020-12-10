@@ -2,8 +2,7 @@ import * as React from 'react';
 
 import Link, { LinkProps } from 'next/link';
 
-import type { CSSObject } from 'styled-components';
-import styled, { css } from 'styled-components';
+import styled, { css, CSSObject } from 'styled-components';
 
 import AppBox, { AppBoxProps, FontWeight, LineHeight } from 'ui/AppBox';
 
@@ -27,9 +26,6 @@ const AppLinkInner = styled(AppBox)<OwnProps>`
     props.applyActiveLinkStyles &&
     css`
       color: ${(props) => props.theme.colors.link};
-      ${(props) =>
-        (props as any).activeLinkStyles &&
-        css((props as any).activeLinkStyles)};
     `}
 `;
 
@@ -44,10 +40,7 @@ const AppLink = React.forwardRef<HTMLElement, Props>(
       scroll,
       shallow,
       prefetch,
-      applyActiveLinkStyles,
       activeLinkStyles,
-      applyFilterOnHover = true,
-      passHref = true,
       ...rest
     }: Props,
     ref
@@ -59,12 +52,12 @@ const AppLink = React.forwardRef<HTMLElement, Props>(
         replace={replace}
         scroll={scroll}
         shallow={shallow}
-        passHref={passHref}
+        passHref={true}
         prefetch={prefetch}>
         <AppLinkInner
-          applyActiveLinkStyles={applyActiveLinkStyles}
+          applyActiveLinkStyles={true}
           activeLinkStyles={activeLinkStyles}
-          applyFilterOnHover={applyFilterOnHover}
+          applyFilterOnHover={true}
           css={{ textDecoration: 'none' }}
           fontWeight={FontWeight.Semibold}
           ref={ref}
