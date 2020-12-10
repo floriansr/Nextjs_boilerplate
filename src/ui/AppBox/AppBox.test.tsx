@@ -24,4 +24,9 @@ describe('<AppBox />', () => {
     tree.rerender(<AppBox as="p">{TEXT}</AppBox>);
     expect(tree.getByText(TEXT).nodeName).toBe('P');
   });
+
+  it('uppercase', () => {
+    const tree = render(<AppBox uppercase={true} as="span">{TEXT}</AppBox>);
+    expect(tree.getByText(TEXT).nodeName).toBe('SPAN');
+  });
 });
